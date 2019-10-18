@@ -1,0 +1,18 @@
+{
+	"lobbystate": {
+		"color": {
+			"description": "color of the player",
+			"type": "string"
+		},
+		"map": {
+			"description": "map of the game",
+			"type": "number"
+		},
+		"number": {
+			"description": "number of AI players",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 2
+		}
+	}
+}

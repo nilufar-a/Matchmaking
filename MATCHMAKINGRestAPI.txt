@@ -1,0 +1,65 @@
+MATCHMAKING
+
+PUT PutCreateGame
+IN: int UserID
+OUT: 200 gameId - int 
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     
+POST JoinGame
+IN: int GameID, int UserID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse GameID"
+     400= "Parse UserID"
+
+POST PostChangeColor
+IN: string color, int UserID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     400= "Parse Color"
+
+GET GetLobbyState
+IN: int GameID
+OUT: 200 "OK" , JSON file
+ERR: 500="InternalServerError"
+     400= "Parse GameID"
+
+POST PostAddAI1
+IN: int GameID, int AIPlayerID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse GameID"
+     400= "Parse AIPlayerID"
+
+POST PostKickPlayer
+IN: int PlayerID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse PlayerID"
+
+POST PostChangeHost
+IN: int GameID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse GameID"
+     
+
+POST PostIAmReady
+IN: int UserID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+
+POST PostChangeMap
+IN: int MapID, int UserID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     400= "Parse MapID"
+
+GET GetListOfGames
+OUT: 200 "OK", array of GameID's
+ERR: 500="InternalServerError"
+     
