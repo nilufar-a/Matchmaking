@@ -6,13 +6,26 @@
 		},
 		"map": {
 			"description": "map of the game",
-			"type": "number"
+			"type": "string"
 		},
-		"number": {
-			"description": "number of AI players",
+		"numberofplayers": {
+			"description": "number of all players in the game",
+			"type": "number",
+			"minimum": 2,
+			"maximum": 10
+		},
+		"numberofAI1": {
+			"description": "number of AI1 players in the game",
 			"type": "number",
 			"minimum": 0,
-			"maximum": 2
+			"maximum": 3
+		},
+		"numberofAI2": {
+			"description": "number of AI2 players in the game",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 3
 		}
+		
 	}
 }
