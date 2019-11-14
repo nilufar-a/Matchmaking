@@ -25,13 +25,28 @@ IN: string GameID
 OUT: 200 "OK" , JSON file
 ERR: 500="InternalServerError"
      400= "Parse GameID"
-
+     
 POST PostAddAI1
 IN: string GameID, string AIPlayerID
 OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse GameID"
      400= "Parse AIPlayerID"
+     
+POST PostAddAI2
+IN: string GameID, string AIPlayerID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse GameID"
+     400= "Parse AIPlayerID"
+
+POST PostChangeNumofPlayers
+IN: int NumofPlayers, string UserID
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     400= "Parse NumofPlayers"
+
 
 POST PostKickPlayer
 IN: string PlayerID
