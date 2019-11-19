@@ -1,19 +1,42 @@
 {
+    "definitions":{
+	  
+      "user":{
+      "description": "stores the user data",
+      "type" : "object",
+      "title": "User",
+      "properties":{
+			"user_id":{
+			"description": "ID number of user",
+			"type": "string"
+			},
+			"user_state":{
+			"description": "state of user",
+			"type": "string"
+			},
+			"color":{
+			"description": "color of user's tracer",
+			"type": "string"
+			}
+			}
+}
+},
     "title": "LobbyState",
     "description": "Lobby of the game",
     "type" : "object",
     "properties":  {
 		
-		"listOfUsers":
+		"Users":
 			{
 			  "type": "array",
 			  "items": {
-			    "type": "user"
+			    "type": "object",
+			    "$ref" : "#/definitions/user"
 			  }
 			  
-			},  
+			}
 			
-		
+		,
 		"map": {
 			"description": "map of the game",
 			"type": "string"
@@ -37,25 +60,6 @@
 			"maximum": 3
 		}
 		
-	},
-	"definitions":{
-	"user":{
-			"description": "stores the user data",
-      "type" : "object",
-      "properties":{
-			"user_id":{
-			"description": "ID number of user",
-			"type": "string"
-			},
-			"user_state":{
-			"description": "state of user",
-			"type": "string"
-			},
-			"color":{
-			"description": "color of user's tracer",
-			"type": "string"
-			}
-			}
-}
-}
+	}
+	
 }
