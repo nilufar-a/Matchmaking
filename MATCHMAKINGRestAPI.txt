@@ -69,6 +69,6 @@ ERR: 500="InternalServerError"
      400= "Parse MapID"
 
 GET GetListOfGames
-OUT: 200 "OK", array of GameID's
+OUT: 200 "OK", JSON file
 ERR: 500="InternalServerError"
      
