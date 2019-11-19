@@ -6,11 +6,11 @@
       "type" : "object",
       "title": "User",
       "properties":{
-			"user_id":{
+			"userID":{
 			"description": "ID number of user",
 			"type": "string"
 			},
-			"user_state":{
+			"userState":{
 			"description": "state of user",
 			"type": "string"
 			},
@@ -37,23 +37,23 @@
 			}
 			
 		,
-		"map": {
+		"mapID": {
 			"description": "map of the game",
 			"type": "string"
 		},
-		"numberofplayers": {
+		"numberOfPlayers": {
 			"description": "number of all players in the game",
 			"type": "integer",
 			"minimum": 2,
 			"maximum": 10
 		},
-		"numberofAI1": {
+		"numberOfAI1": {
 			"description": "number of AI1 players in the game",
 			"type": "integer",
 			"minimum": 0,
 			"maximum": 3
 		},
-		"numberofAI2": {
+		"numberOfAI2": {
 			"description": "number of AI2 players in the game",
 			"type": "integer",
 			"minimum": 0,
