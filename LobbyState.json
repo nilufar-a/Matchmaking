@@ -1,8 +1,48 @@
 {
-	"lobbystate": {
+    "title": "LobbyState",
+    "description": "Lobby of the game",
+    "type" : "object",
+    "properties":  {
 		
-		"listOfUsers":[ 
+		"listOfUsers":
 			{
+			  "type": "array",
+			  "items": {
+			    "type": "user"
+			  }
+			  
+			},  
+			
+		
+		"map": {
+			"description": "map of the game",
+			"type": "string"
+		},
+		"numberofplayers": {
+			"description": "number of all players in the game",
+			"type": "integer",
+			"minimum": 2,
+			"maximum": 10
+		},
+		"numberofAI1": {
+			"description": "number of AI1 players in the game",
+			"type": "integer",
+			"minimum": 0,
+			"maximum": 3
+		},
+		"numberofAI2": {
+			"description": "number of AI2 players in the game",
+			"type": "integer",
+			"minimum": 0,
+			"maximum": 3
+		}
+		
+	},
+	"definitions":{
+	"user":{
+			"description": "stores the user data",
+      "type" : "object",
+      "properties":{
 			"user_id":{
 			"description": "ID number of user",
 			"type": "string"
@@ -16,30 +56,6 @@
 			"type": "string"
 			}
 			}
-                                
-		],
-		"map": {
-			"description": "map of the game",
-			"type": "string"
-		},
-		"numberofplayers": {
-			"description": "number of all players in the game",
-			"type": "number",
-			"minimum": 2,
-			"maximum": 10
-		},
-		"numberofAI1": {
-			"description": "number of AI1 players in the game",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 3
-		},
-		"numberofAI2": {
-			"description": "number of AI2 players in the game",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 3
-		}
-		
-	}
+}
+}
 }
