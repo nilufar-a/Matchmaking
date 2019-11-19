@@ -7,7 +7,7 @@ ERR: 500="InternalServerError"
      400= "Parse UserID"
      
 POST JoinGame
-IN: string GameID, string UserID
+IN: int GameID, string UserID
 OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse GameID"
@@ -21,20 +21,20 @@ ERR: 500="InternalServerError"
      400= "Parse Color"
 
 GET GetLobbyState
-IN: string GameID
+IN: int GameID
 OUT: 200 "OK" , JSON file
 ERR: 500="InternalServerError"
      400= "Parse GameID"
      
 POST PostAddAI1
-IN: string GameID, string AIPlayerID
+IN: int GameID, string AIPlayerID
 OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse GameID"
      400= "Parse AIPlayerID"
      
 POST PostAddAI2
-IN: string GameID, string AIPlayerID
+IN: int GameID, string AIPlayerID
 OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse GameID"
