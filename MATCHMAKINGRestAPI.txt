@@ -53,12 +53,6 @@ IN: string PlayerID
 OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse PlayerID"
-
-POST PostChangeHost
-IN: string GameID
-OUT: 200 "OK"
-ERR: 500="InternalServerError"
-     400= "Parse GameID"
      
 
 POST PostIAmReady
