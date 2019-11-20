@@ -1,0 +1,33 @@
+﻿{
+  "definitions":{
+    "game":{
+      "description": "stores the game data",
+      "type" : "object",
+      "title": "Game",
+      "properties":{
+			"gameID":{
+			"description": "ID number of game",
+			"type": "integer"
+			}
+			
+			}
+}
+  },
+  
+    "title": "listOfGames",
+    "description": "List of games",
+    "type" : "object",
+    "properties":  {
+		
+		"Games":
+			{
+			  "type": "array",
+			  "items": {
+			    "type": "object",
+			    "$ref" : "#/definitions/game"
+			  }
+			  
+			}
+			
+  }
+}
