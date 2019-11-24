@@ -8,7 +8,7 @@ JSON object
     }
 
 Successful output properties:
-200 OK -- request has been processed successfully, GameID-string.
+200 OK -- request has been processed successfully, GameID-int.
 
 Error output properties:
 500="InternalServerError" 
