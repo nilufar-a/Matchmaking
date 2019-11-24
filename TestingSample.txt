@@ -1,0 +1,84 @@
+Endpoint: PUT /PutCreateGame
+Use case:  Used for creating a new game.
+
+Input properties:
+JSON object
+    {
+        "UserID": string -- User identification number e.g. "joker19"    
+    }
+
+Successful output properties:
+200 OK -- request has been processed successfully, GameID-string.
+
+Error output properties:
+500="InternalServerError" 
+400= "Parse UserID"
+
+Sample:
+PUT /PutCreateGame
+Host: https://match-making-dot-trainingprojectlab2019.appspot.com
+Content-Type: application/json
+{
+	"UserID": "Muntezir3457"	
+	
+}
+
+Expected response: 200 OK, "GameID": 13
+
+------------------------------------------------------------
+Endpoint: POST /PostChangeColor
+Use case:  Used for changing the color of the user's tracer.
+
+Input properties:
+JSON object
+    {
+	"color": string -- Color of the tracer.
+        "UserID": string -- User identification number e.g. "joker19";       
+    }
+
+Successful output properties:
+200 OK -- request has been processed successfully.
+
+Error output properties:
+500="InternalServerError" 
+400= "Parse UserID"
+400= "Parse Color"
+Sample:
+POST /PostChangeColor
+Host: https://match-making-dot-trainingprojectlab2019.appspot.com
+Content-Type: application/json
+{
+	"UserID": "SamirBerde",	
+	"color": "black"
+}
+
+Expected response: 200 OK.
+
+------------------------------------------------------------
+Endpoint: GET /GetLobbyState
+Use case:  Used for getting the settings of lobby of the game.
+
+Input properties:
+Query Parameter
+    {
+        "GameID": int -- Game identification number e.g. 9;       
+    }
+
+Successful output properties:
+200 OK -- request has been processed successfully, JSON object.
+
+Error output properties:
+500="InternalServerError"
+400= "Parse GameID"
+
+Sample:
+GET /GetLobbyState
+Host: https://match-making-dot-trainingprojectlab2019.appspot.com
+Content-Type: Content-Length=0
+{
+	https://match-making-dot-trainingprojectlab2019.appspot.com/GetLobbyState?GameID=9
+	(GameID is the query parameter)
+	
+}
+
+Expected response: 200 OK.
