@@ -46,7 +46,20 @@ OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse UserID"
      400= "Parse NumofPlayers"
+     
+POST PostChangeTurnInterval
+IN: string UserID, double turnInterval
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     400= "Parse turnInterval"
 
+POST PostChangeCycleBehaviour
+IN: string UserID, boolean disappear
+OUT: 200 "OK"
+ERR: 500="InternalServerError"
+     400= "Parse UserID"
+     400= "Parse disappear"
 
 POST PostKickPlayer
 IN: string PlayerID
@@ -54,7 +67,6 @@ OUT: 200 "OK"
 ERR: 500="InternalServerError"
      400= "Parse PlayerID"
      
-
 POST PostIAmReady
 IN: string UserID
 OUT: 200 "OK"
