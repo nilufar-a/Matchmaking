@@ -43,7 +43,7 @@
 		},
 	    	"turnInterval": {
 			"description": "time interval between turns",
-			"type": "double"
+			"type": "number"
 		},
 	    	"cycleBehaviour": {
 			"description": "indicates if cycle should disappear after user dies",
